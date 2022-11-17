@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;400;600&display=swap');
+
+:root {
+  --transition: ease-in 0.8s;
+  --grey: rgb(79, 76, 76, 0.7);
+  --navy: rgb(6, 1, 24, 0.7);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto Mono', monospace;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: white;
+}
+
+/* HOME/FAVOURITES MAIN SCREEN*/
+
+.mainScreen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* THEMES */
+
+.dark {
+  background-repeat: repeat;
+  background-image: url(./static/bg-pic-dark.jpg);
+  transition: var(--transition);
+  min-height: 100vh;
+}
+
+.light {
+  background-image: url(./static/bg-pic-light.jpg);
+  background-repeat: repeat;
+  transition: var(--transition);
+  min-height: 100vh;
+}
+
+/* NAVBAR */
+
+.stickyNav {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: var(--grey);
+  width: 100%;
+}
+
+.stickyNavDark {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: var(--navy);
+  width: 100%;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end;
+  gap: 2rem;
+  margin-bottom: none;
+}
+
+li {
+  margin: 1rem 3rem 1rem 0rem;
+}
+
+.homeLink:hover {
+  text-decoration: none;
+  color: black;
+}
+
+.iconButton {
+  border: none;
+  background-color: transparent;
+  color: white;
+  outline: none;
+  cursor: pointer;
+}
+
+.navbarHeartIcon {
+  margin-right: 0.3rem;
+}
+
+.iconButton:hover {
+  color: yellow;
+  text-decoration: none;
+}
+
+.iconButton:focus {
+  outline: none;
+}
+
+/* HOME */
+
+.countryLink {
+  transition: 0.3s;
+}
+
+.countryLink:hover {
+  cursor: pointer;
+  background-color: lightgrey;
+  color: black;
+}
+
+.countriesHeading {
+  color: white;
+  font-weight: 200;
+  margin: 7rem 0rem 7rem 0rem;
+  font-size: 4rem;
+}
+
+/* SEARCHBAR */
+
+.searchBar {
+  margin-bottom: 3rem;
+}
+
+.searchBarInput::placeholder {
+  color: white;
+}
+
+.searchBarInput {
+  background-color: transparent;
+  font-size: 1.5rem;
+  font-weight: 400;
+  border: none;
+  color: white;
+  margin-left: 1.7rem;
+}
+
+.searchBarInput:focus {
+  outline: none;
+}
+
+/* TABLE */
+
+.sortIcons {
+  color: white;
+}
+
+.sortIcons:hover {
+  color: yellow;
+}
+
+.sortIconsB {
+  background-color: transparent;
+  border: none;
+  font-size: 0.7rem;
+  transition: 0.2s;
+}
+
+.sortIconsB:focus {
+  outline: none;
+}
+
+.sortIconsB:first-child {
+  margin-left: 1rem;
+}
+
+.sortIconsB:hover {
+  cursor: pointer;
+}
+
+table {
+  display: block;
+  width: 80%;
+  table-layout: fixed;
+  background-color: var(--grey);
+  color: white;
+  margin-top: 2rem;
+  padding: 2rem;
+  margin-bottom: 3rem;
+}
+
+.tableDark {
+  display: block;
+  width: 80%;
+  table-layout: fixed;
+  background-color: var(--navy);
+  color: white;
+  margin-top: 2rem;
+  padding: 2rem;  
+  margin-bottom: 3rem;
+}
+
+th, td {
+  width: 50rem;
+  padding: 1rem;
+  border-bottom: 1px solid white;
+}
+
+th {
+  font-weight: 600;
+}
+
+.favouritesButton {
+  margin-left: 1.6rem;
+}
+
+.favSelected {
+  color: yellow;
+}
+/* COUNTRY PAGE */
+
+.countryPage {
+  width: 100%;
+  background-repeat: repeat;
+  background-size: cover;
+}
+
+.countryInfo {
+  height: 100vh;
+}
+
+.countryInfo__Div {
+  width: 50%;
+  background-color: rgba(68, 67, 67, 0.5);
+  padding: 2rem 3rem;
+  margin-left: 3rem;
+  margin-top: 5rem;
+}
+
+.backArrowButton {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-family: 'Roboto Mono';
+  margin-left: 30rem;
+  transition: 0.2s;
+}
+
+.backArrowButton:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.backArrowButton:focus {
+  outline: none;
+}
+
+.backArrow {
+  font-size: 1rem;
+  color: white;
+  margin-right: 0.5rem;
+}
+
+.imgFlag {
+  width: 100px;
+  display: inline-block;
+  margin: 1rem 0rem 2rem 0rem;
+}
+
+.arrayList {
+  display: inline-block;
+}
+
+/* PAGINATION */
+
+.paginationNav__link {
+  background-color: var(--grey);
+  color: white;
+  outline: none;
+  border: none;
+}
+
+.paginationNav__link:hover {
+  background-color: white;
+  color: var(--grey);
+}
